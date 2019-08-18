@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+	<head>
+	<style>
+	form {
+		font-size: 20px;
+		line-height: 1.99;
+		display: inline-block;
+		background-color:#FE7E73;
+		padding: 35px;
+		border-radius:6px;
+		text-align:left;
+	}
+	img{
+	float : right;
+	margin-bottom: -87px;
+    margin-left: 24px;
+    margin-top: -32px;
+    margin-right: -36px;
+	}
+	@font-face {
+		font-family: myFirstFont;
+		src: url(JL.ttf);
+		}
+	div.title {
+  		font-family: myFirstFont;
+		font-size:30px;
+		}
+	input[type=text] ,#sel{
+	background-color : white;
+	border: 0.1px solid black;
+	border-radius: 3px;
+	height:30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+	input[type=password] {
+	background-color : white;
+	border: 0.1px solid black;
+	border-radius: 3px;
+	height:30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+	.sc {
+  	background-color: white;
+  	width:35%;
+  	color: #FE7E73;
+  	border: 2px solid black;
+  	padding: 4px 6px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+	}
+	.sc:hover, .sc:active,button:hover{
+	color: black;
+	}
+	button {
+	display:inline-block;
+	border:0.5px solid black;
+	background-color: white;
+	color: #FE7E73;
+	border-radius: 2px;
+	padding: 4px 6px;
+	font-family: myFirstFont;
+	font-size:20px;
+	cursor: pointer;
+	}
+	</style>
+
+<script> 
+function first_focus()
+{
+  var uid = document.f1.uname.focus();
+  return true;
+}
+function fun1(mx)                                    
+{ 
+    var name = document.f1.uname;                 	 
+   
+    if (name.length<mx)                                  
+    { 
+        window.alert("Please enter valid name."); 
+        name.focus(); 
+		return false;
+    }
+	document.f1.eid.focus();
+	return true;
+}
+function fun2()
+{
+    var email = document.f1.eid;    
+    var mailformat =/^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$/g;
+    if (mailformat.test(email.value)==false)                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+		return false;
+    }
+	document.f1.sel.focus();
+	return true;
+}
+	
+function fun3()
+{
+    var what=document.f1.sel;
+    if (what.value == "default")                  
+    { 
+        window.alert("Please select your country code."); 
+        what.focus(); 
+		return false;
+    } 
+	document.f1.mn.focus();
+	return true;
+}	
+function fun4()
+{
+    var phone = document.f1.mn;   	
+    if (phone.value == "")                           
+    { 
+        window.alert("Please enter your mobilenumber."); 
+        phone.focus(); 
+		return false;
+    } 
+	var patt=/^\d{10}$/g;
+    if (patt.test(phone.value)==false)
+    {
+        window.alert("enter a valid mobile number");
+		phone.focus();
+		return false;
+    }
+	document.f1.gender.focus();
+	return true;
+ }
+function work()
+{
+  var s = "?";
+  var i = 0;
+  for(;i<document.f1.elements.length;i++)
+  {
+    if(("gender"==(document.f1.elements[i].name))&&(document.f1.elements[i].checked))
+    {
+      s = document.f1.elements[i].value;
+    }
+  }
+  if("?" == s)
+  {
+    alert("Please select a gender");
+    return false;
+  }
+  document.f1.pas.focus;
+return true;
+}
+function fun5()
+{
+    var password = document.f1.pas;  
+	var patt=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/g;
+    if (patt.test(password.value)==false || password.length<10)                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    }
+	document.f1.cpas.focus();
+	return true;
+}
+function fun6()
+{	
+    var password = document.f1.pas;
+    var cpassword =document.f1.cpas;	
+    if (password.value!= cpassword.value)                        
+    { 
+        window.alert("Please confirm your password"); 
+        cpassword.focus();
+        return false;		
+    } 	
+	return true;
+}
+</script>
+	</head>
+	<body onload="first_focus()">
+	<center><form name="f1" method="post">
+	<img src="pl.jpg">
+	Create an account here.<br>
+	<input type="text" name="uname" placeholder="Username" onchange="fun1(5)"><br>
+	<input type="text" name="eid" placeholder="Email-id" size=30 onchange="fun2()"><br>
+	<select id=sel name="sel" value="default" onchange="fun3()">
+	<option value="1">+91</option>
+	<option value="2">+92</option>
+	<option value="3">+93</option>
+	<option value="4">+94</option>
+	</select>
+	<input type="text" name="mn" placeholder="mobile number" size=30 onchange="fun4()"><br>
+	<div onchange="work()">
+    <input type="radio" name="gender">male</input>&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender">female</input><br>
+    </div>	
+	<input type="password" name="pas" placeholder="create new password" size=30 onchange="fun5()"><br>
+	<input type="password" name="cpas" placeholder="confirm password" size=30 onchange="fun6()"><br>
+	<div><button>SignUp</button></div><br>
+	Already have an account?<br>
+	&nbsp;Email-id: <input type="text" value="" placeholder="User-Id" size=30><br>
+	Password: <input type="password" value="" placeholder="Password" size=30><br>
+    <button>Login</button>&nbsp;&nbsp;<a id="fp" href="">forgot password?</a><br>
+	<div align="center" class="title"><a class="sc" href="nwc.htm" target="_top">skip to course</a></div>
+	</form></center>
+	</body>
+</html>
+
+

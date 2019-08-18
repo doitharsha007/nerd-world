@@ -1,0 +1,30 @@
+	@font-face {
+		font-family: myFirstFont;
+		src: url(JL.ttf);
+		}
+	h1 {
+  		font-family: myFirstFont;
+		font-size-adjust: 1;
+		color: #FE7E73;
+		font-variant: small-caps;
+		}
+	@font-face {
+		font-family: mySFont;
+		src: url(PB.ttf);
+		}
+	li {
+	font-family: mySFont;
+	font-size:larger;
+	}
+	
+	p{
+	font-size:larger;
+	line-height:30px;
+	}
+	div {
+	border: 2px solid #FE7E73;
+	background-color: lightgrey;
+	padding : 25px;
+	width: 90%;
+	text-align: left;
+	}

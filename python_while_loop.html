@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+<style>
+         div.txt {
+         display: inline-block;
+         border: 5px solid #FE7E73;
+         background-color: lightgrey;
+         text-align:left;
+         border-width: auto;
+         padding: 5px;
+         }
+         </style>
+</head>
+<body>
+<center><div class="txt">
+<pre style="font-family: -webkit-body;">
+<h2>Python While Loops</h2>
+<h3>Python Loops</h3>
+Python has two primitive loop commands:
+
+->while loops
+->for loops
+<h3>The while Loop</h3>
+With the while loop we can execute a set of statements as long as a condition is true.
+
+<h3>Example</h3>
+Print i as long as i is less than 6:
+
+i = 1
+while i &lt; 6:
+  print(i)
+  i += 1
+Note: remember to increment i, or else the loop will continue forever.
+
+The while loop requires relevant variables to be ready, in this <h3>Example</h3> we need to define an indexing variable, i, which we set to 1.
+
+<h3>The break Statement</h3>
+With the break statement we can stop the loop even if the while condition is true:
+
+<h3>Example</h3>
+Exit the loop when i is 3:
+
+i = 1
+while i &lt; 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+ 
+<h3>The continue Statement</h3>
+With the continue statement we can stop the current iteration, and continue with the next:
+
+<h3>Example</h3>
+Continue to the next iteration if i is 3:
+
+i = 0
+while i &lt; 6:
+  i += 1 
+  if i == 3:
+    continue
+  print(i)
+</pre>
+</div></center>
+</body>
+</html>	

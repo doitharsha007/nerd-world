@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+<head>
+<style>
+	@font-face {
+		font-family: mySFont;
+		src: url(PB.ttf);
+		}
+div.caption {
+  		font-family: mySFont;
+		font-size: xx-large;
+		color: #FE7E73;
+		line-height:0;
+		
+		}
+* {box-sizing:border-box}
+.mySlides {
+  display: none;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color:white;
+}
+.text {
+  color: black;
+  font-size: 26px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@font-face {
+		font-family: myFirstFont;
+		src: url(JL.ttf);
+		}
+	div.title {
+  		font-family: myFirstFont;
+		font-size-adjust: 2;
+		color: #FE7E73;
+		}
+	h1{
+	font-variant: small-caps;
+	}
+	img{
+	border-radius:6px;
+	}
+	p{
+	font-size:large;
+	line-height:28px;
+	}
+	.al:link, .al:visited {
+  	background-color: white;
+  	width:15%;
+  	color: #FE7E73;
+  	border: 2px solid black;
+  	padding: 4px 4px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-family: myFirstFont;
+	}
+	.al:hover,a:hover, a:active {
+	color: black;
+	}
+    form {
+		font-size: 20px;
+		line-height: 1.99;
+		display: inline-block;
+		background-color:#FE7E73;
+		padding: 35px;
+		border-radius:6px;
+		text-align:left;
+	}
+	#fm{
+	float : right;
+	margin-bottom: -87px;
+    margin-left: 24px;
+    margin-top: -32px;
+    margin-right: -36px;
+	}
+	input[type=text] ,#sel{
+	background-color : white;
+	border: 0.1px solid black;
+	border-radius: 3px;
+	height:30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+	input[type=password] {
+	background-color : white;
+	border: 0.1px solid black;
+	border-radius: 3px;
+	height:30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+	button:hover{
+	color: black;
+	}
+	button {
+	display:inline-block;
+	border:0.5px solid black;
+	background-color: white;
+	color: #FE7E73;
+	border-radius: 2px;
+	padding: 4px 6px;
+	font-family: myFirstFont;
+	font-size:20px;
+	cursor: pointer;
+	}
+	#fp{
+	color:bluevoilet;
+	}
+ #tp{
+     position: relative;
+    background-color: #ffffff;
+    height: 470px;
+    padding-top: 20px;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 2;
+	margin-right: 12.5%;
+    margin-left: 12.5%;
+ }
+ #lft{
+ width:65%;
+ background-color: antiquewhite;
+ }
+ #rgt{
+    float: right;
+    margin-top: -600px;
+    margin-right: 40px;
+ }
+ .bb{
+     text-decoration: none;
+    font-size: 22px;
+    border: 2px solid;
+    padding: 3px;
+    color: darksalmon;
+    border-color: black;
+    margin: 5px;
+    font-family: myFirstFont;
+ }
+</style>
+<script>
+var slideIndex = 0;
+showSlides();
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+function fun1(mx)                                    
+{ 
+    var name = document.f1.uname;                 	 
+   
+    if (name.value.length<mx)                                  
+    { 
+        window.alert("Please enter valid name."); 
+        name.focus(); 
+		return false;
+    }
+	document.f1.eid.focus();
+	return true;
+}
+function fun2()
+{
+    var email = document.f1.eid;    
+    var mailformat =/^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$/g;
+    if (mailformat.test(email.value)==false)                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+		return false;
+    }
+	document.f1.sel.focus();
+	return true;
+}
+	
+function fun3()
+{
+    var what=document.f1.sel;
+    if (what.value == "default")                  
+    { 
+        window.alert("Please select your country code."); 
+        what.focus(); 
+		return false;
+    } 
+	document.f1.mn.focus();
+	return true;
+}	
+function fun4()
+{
+    var phone = document.f1.mn;   	
+    if (phone.value == "")                           
+    { 
+        window.alert("Please enter your mobilenumber."); 
+        phone.focus(); 
+		return false;
+    } 
+	var patt=/^\d{10}$/g;
+    if (patt.test(phone.value)==false)
+    {
+        window.alert("enter a valid mobile number");
+		phone.focus();
+		return false;
+    }
+	document.f1.gender.focus();
+	return true;
+ }
+function work()
+{
+  var s = "?";
+  var i = 0;
+  for(;i<document.f1.elements.length;i++)
+  {
+    if(("gender"==(document.f1.elements[i].name))&&(document.f1.elements[i].checked))
+    {
+      s = document.f1.elements[i].value;
+    }
+  }
+  if("?" == s)
+  {
+    alert("Please select a gender");
+    return false;
+  }
+  document.f1.pas.focus;
+return true;
+}
+function fun5()
+{
+    var password = document.f1.pas;  
+	var patt=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/g;
+    if (patt.test(password.value)==false || password.length<10)                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    }
+	document.f1.cpas.focus();
+	return true;
+}
+function fun6()
+{	
+    var password = document.f1.pas;
+    var cpassword =document.f1.cpas;	
+    if (password.value!= cpassword.value)                        
+    { 
+        window.alert("Please confirm your password"); 
+        cpassword.focus();
+        return false;		
+    } 	
+	return true;
+}
+</script>
+</head>
+  <body>
+   <div style="margin-bottom:20px;background-color: blanchedalmond;">
+    <div class="title" align="center" style="font-size: 115px;text-shadow: 3px 2px black;">Nerd's Works and Choices</div>
+	<div class="caption" align="center">Guide for Erudition</div>
+	</div>
+	 <div id="tp">
+	 	<div class="slideshow-container">
+
+          <div align="center" class="mySlides fade" style="display:block">
+            <div class="numbertext">1/ 3</div>
+            <a href="nwc.htm" target="_top"><img src="22.jpg" style="width:100%;height:-webkit-fill-available;"></a>
+            <div class="text"><b>"Skip to Crouse"</b></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+			<a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_top"><img src="44.jpg" style="width:100%;height:-webkit-fill-available;"></a>
+            <div class="text" style="    color: peachpuff;"><b>"History of Python"</b></div>
+          </div>
+	      <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+			<img src="33.jpg" style="width:100%;height:-webkit-fill-available;">
+            <div class="text"></div>
+          </div>
+
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+       </div>
+	  </div> 
+            <br>
+<div id="lft">
+<h1 align="center">Learn Python Programming</h1>
+	<div align="center"><a href="features.htm" class="al" target="_blank">Features</a>
+	<a href="app.htm" class="al" target="_blank">Applications</a></div><br>
+	<div align="center"><img src="Home page.png" width=600 height="300"></div>
+	<p>Python is a powerful high-level, object oriented and multi-purpose programming language created by Guido van Rossum.<br>It has simple easy-to-use syntax, making it the perfect language for someone trying to learn computer programming for the first time. It's fun to work in Python because it allows you to think about the problem rather than focusing on the syntax.<br>Python has wide range of applications from Web development (like: Django and Bottle), scientific and mathematical computing (Orange, SymPy, NumPy) to desktop graphical user Interfaces (Pygame, Panda3D).<br>
+	This is a comprehensive guide on how to get started in Python, why you should learn it and how you can learn it.</p>
+</div>
+<div id="rgt">
+<form name="f1" method="post">
+	<img id="fm" src="pl.jpg">
+	Create an account here.<br>
+	<input type="text" name="uname" placeholder="Username" onchange="fun1(5)"><br>
+	<input type="text" name="eid" placeholder="Email-id" size=30 onchange="fun2()"><br>
+	<select id=sel name="sel" value="default" onchange="fun3()">
+	<option value="1">+91</option>
+	<option value="2">+92</option>
+	<option value="3">+93</option>
+	<option value="4">+94</option>
+	</select>
+	<input type="text" name="mn" placeholder="mobile number" size=30 onchange="fun4()"><br>
+	<div onchange="work()">
+    <input type="radio" name="gender">male</input>&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender">female</input><br>
+    </div>	
+	<input type="password" name="pas" placeholder="create new password" size=30 onchange="fun5()"><br>
+	<input type="password" name="cpas" placeholder="confirm password" size=30 onchange="fun6()"><br>
+	<div><button>SignUp</button></div><br>
+	Already have an account?<br>
+	&nbsp;Email-id: <input type="text" value="" placeholder="User-Id" size=30><br>
+	Password: <input type="password" value="" placeholder="Password" size=30><br>
+    <button>Login</button>&nbsp;&nbsp;<a id="fp" href="">forgot password?</a><br>
+	</form>
+</div>
+<footer style="background-color: lightgrey;">
+<div align="center"  style="height:60px;">
+<br>
+<a class="bb" href="" target="">about us</a>
+<a class="bb" href="" target="">contact us</a>
+<a class="bb" href="" target="">our website</a>
+<a class="bb" href="" target="">privacy policies</a>
+</div>
+<p align="center">&copy;Copyright 2019-2025 https://math-19.github.io/nerd-world/ All rights reserved. Developed by nerd's.</p>
+</footer>
+	</body>
+</html>

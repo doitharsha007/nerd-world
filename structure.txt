@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+<style>
+   	body{
+   		    background-color: lavenderblush;
+   	}
+   	</style>
+</head>
+<body>
+<div class="txt">
+<pre style="font-family: -webkit-body;">
+</pre>
+</div>
+</body>
+</html>	

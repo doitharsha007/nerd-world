@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+   <style>
+         div.txt {
+         display: inline-block;
+         border: 5px solid #FE7E73;
+         background-color: lightgrey;
+         text-align:left;
+         border-width: 100%;
+         padding: 5px;
+         }
+         </style>
+</head>
+<body>
+<div class="txt">
+<pre style="font-family: -webkit-body;">
+<h2>Python Strings</h2>
+<h3>String Literals</h3>
+String literals in python are surrounded by either single quotation marks, or double quotation marks.<br><br>
+
+'hello' is the same as "hello".<br><br>
+
+You can display a string literal with the print() function:<br><br>
+
+<h3>Example</h3>
+print("Hello")<br>
+print('Hello')<br>
+Assign String to a Variable<br>
+Assigning a string to a variable is done with the variable name followed by an equal sign and the string:<br><br>
+
+<h3>Example</h3>
+a = "Hello"<br>
+print(a)<br>
+Multiline Strings<br>
+You can assign a multiline string to a variable by using three quotes:<br><br>
+
+<h3>Example</h3>
+You can use three double quotes:<br><br>
+
+a = """Lorem ipsum dolor sit amet,<br>
+consectetur adipiscing elit,<br>
+sed do eiusmod tempor incididunt<br>
+ut labore et dolore magna aliqua."""<br>
+print(a)<br>
+Or three single quotes:<br><br>
+
+<h3>Example</h3>
+a = '''Lorem ipsum dolor sit amet,<br>
+consectetur adipiscing elit,<br>
+sed do eiusmod tempor incididunt<br>
+ut labore et dolore magna aliqua.'''<br>
+print(a)<br>
+Note: in the result, the line breaks are inserted at the same position as in the code.<br><br>
+
+
+<h3>Strings are Arrays</h3>
+Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.<br><br>
+
+However, Python does not have a character data type, a single character is simply a string with a length of 1. Square brackets can be used to access elements of the string.<br><br>
+
+<h3>Example</h3>
+Get the character at position 1 (remember that the first character has the position 0)<br><br>
+
+a = "Hello, World!"<br>
+print(a[1])<br>
+<h3>Example</h3>
+Substring. Get the characters from position 2 to position 5 (not included):<br><br>
+
+b = "Hello, World!"<br>
+print(b[2:5])<br>
+Example<br>
+The strip() method removes any whitespace from the beginning or the end:<br><br>
+
+a = " Hello, World! "<br>
+print(a.strip()) # returns "Hello, World!"<br>
+<h3>Example</h3>
+The len() method returns the length of a string:<br><br>
+
+a = "Hello, World!"<br>
+print(len(a))<br>
+<h3>Example</h3>
+The lower() method returns the string in lower case:<br><br>
+
+a = "Hello, World!"<br>
+print(a.lower())<br>
+<h3>Example</h3>
+The upper() method returns the string in upper case:<br><br>
+
+a = "Hello, World!"<br>
+print(a.upper())<br>
+<h3>Example</h3>
+The replace() method replaces a string with another string:<br><br>
+
+a = "Hello, World!"<br>
+print(a.replace("H", "J"))<br>
+<h3>Example</h3>
+The split() method splits the string into substrings if it finds instances of the separator:<br><br>
+
+a = "Hello, World!"<br>
+print(a.split(",")) # returns ['Hello', ' World!']<br>
+Learn more about String Methods with our String Methods Reference<br><br>
+
+<h3>String Format</h3>
+As we learned in the Python Variables chapter, we cannot combine strings and numbers like this:<br><br>
+
+<h3>Example</h3>
+age = 36<br>
+txt = "My name is John, I am " + age<br>
+print(txt)<br>
+But we can combine strings and numbers by using the format() method!<br><br>
+
+The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are:<br><br>
+
+<h3>Example</h3>
+Use the format() method to insert numbers into strings:<br><br>
+
+age = 36<br>
+txt = "My name is John, and I am {}"<br>
+print(txt.format(age))<br>
+The format() method takes unlimited number of arguments, and are placed into the respective placeholders:<br><br>
+
+<h3>Example</h3>
+quantity = 3<br>
+itemno = 567<br>
+price = 49.95<br>
+myorder = "I want {} pieces of item {} for {} dollars."<br>
+print(myorder.format(quantity, itemno, price))<br>
+You can use index numbers {0} to be sure the arguments are placed in the correct placeholders:<br><br>
+
+<h3>Example</h3>
+quantity = 3<br>
+itemno = 567<br>
+price = 49.95<br>
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."<br>
+print(myorder.format(quantity, itemno, price))<br>
+</pre>
+</div>
+</body>
+</html>	

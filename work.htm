@@ -1,0 +1,26 @@
+function work(quiz,Ans)
+{
+  var s = "?";
+  var i = 0;
+  for(;i<quiz.elements.length;i++)
+  {
+    if(("cc"==(quiz.elements[i].name))&&(quiz.elements[i].checked))
+    {
+      s = quiz.elements[i].value;
+    }
+  }
+  if("?" == s)
+  {
+    alert("Please make a selection.");
+    return false;
+  }
+  if(s == Ans)
+  {
+    alert("Well done!\n'"+s+"' is correct.");
+  }
+  else
+  {
+    alert("Oops!\n'"+s+"' is incorrect.");
+  }
+  return false;
+}
